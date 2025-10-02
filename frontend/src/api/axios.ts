@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://task-management-application-k3qg.onrender.com/api",
   withCredentials: true, // for using cookies
 });
 
@@ -28,7 +28,7 @@ api.interceptors.response.use(
       try {
         // call the refresh token :
         const res = await axios.post(
-          "http://localhost:5000/api/auth/refresh-token",
+          "https://task-management-application-k3qg.onrender.com/api/auth/refresh-token",
           {},
           {
             withCredentials: true,
