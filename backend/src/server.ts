@@ -35,12 +35,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Global error handler
-app.use((err: Error, req: express.Request, res: express.Response, next: express.NextFunction) => {
-  console.error(err.stack);
-  res.status(500).json({ message: 'Something went wrong!' });
-});
-
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/agents', agentRoutes);

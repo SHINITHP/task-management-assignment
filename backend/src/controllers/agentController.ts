@@ -40,6 +40,7 @@ export const createAgent = async (req: Request, res: Response) => {
         fullName: agent.fullName,
         email: agent.email,
         phone: agent.phone,
+        role: agent.role,
       },
     });
   } catch (error) {
