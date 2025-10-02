@@ -22,7 +22,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://task-management-assignment-sandy.vercel.app/"
+      "https://task-management-assignment-sandy.vercel.app"
     ],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
