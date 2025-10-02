@@ -1,5 +1,4 @@
 import type { AddTaskModalProps } from "@/types";
-import React from "react";
 import {
   Dialog,
   DialogContent,

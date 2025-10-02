@@ -1,6 +1,6 @@
-import { Hourglass, LogOut, Menu, Stethoscope, Timer, X } from "lucide-react";
+import { LogOut, Menu, Timer, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import React, { useEffect } from "react";
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ModeToggle } from "./mode-toogle";
 
@@ -15,14 +15,8 @@ export const HeroHeader = () => {
   const navigate = useNavigate();
 
   const [menuState, setMenuState] = React.useState(false);
-  const [isScrolled, setIsScrolled] = React.useState(false);
   const isAuthenticated = !!localStorage.getItem("accessToken");
 
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleLogout = () => {
     // call the backend here..
